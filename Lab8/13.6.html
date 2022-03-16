@@ -1,0 +1,37 @@
+<html >
+
+  <head>
+    <title>13.6</title>
+  </head>
+
+  <body onload = "loadEvent()">
+  <p>Click anywhere on the page to know about the event/element. You can also hold the Ctrl or shift key during clicking </p>
+  </body>
+  <script >
+    function Clicked( event ){
+        var nameofEvent = event;
+      var ele;
+      if ( !event ){
+        var event = window.event;
+      }
+      
+      if ( event.target != null ){
+        ele= event.target;
+      } else{
+        ele= event.srcElement;
+      }
+      if ( event.ctrlKey ){
+        window.alert( "Clicked with Ctrl The name is = " + ele  );
+      } else if ( event.shiftKey ) {
+        window.alert( "Clicked with shift. The name is = " + nameofEvent );
+      } else{
+        window.alert( "Clicked" );
+      }
+
+    }
+    function loadEvent(){
+      document.onclick = Clicked;
+    }
+  </script>
+
+</html>
