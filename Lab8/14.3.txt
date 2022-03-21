@@ -1,5 +1,0 @@
-a) false, NOT set the coordinates of the path destination
-b)false, there is an additional cap.
-c)false, it only can be the same x-coordinates and different y-coordinates instead of different x and same y.
-d)True
-e)false, not only single point of inflection but also single/two points of inflection

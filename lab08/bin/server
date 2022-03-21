@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DOMAIN=${1-localhost}
+PORT=${2-4000}
+(cd public && php -S $DOMAIN:$PORT)

@@ -1,7 +1,0 @@
-a) beginPath
-b)bevel, round and miter
-c)strokeStyle
-d)bevel
-e) 0 and 1
-f)textAlign
-g) Math.PI
