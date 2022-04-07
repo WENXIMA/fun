@@ -1,0 +1,11 @@
+ww
+get_cluster_id(Points,ID):-
+    get_cluster_id(Points,[],ID).
+get_cluster_id([],ID,ID).
+get_cluster_id([(_,_,_,_,CLUSTER_ID)|Points],L,ID):-
+    member(CLUSTER_ID,L),
+    get_cluster_id(Points,L,ID),!.
+get_cluster_id([(_,_,_,_,CLUSTER_ID)|Points],L,ID):-
+    \+member(CLUSTER_ID,L),
+    append(L,[CLUSTER_ID],L1),
+    get_cluster_id(Points,L1,ID).
